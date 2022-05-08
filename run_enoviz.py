@@ -10,25 +10,13 @@ import flask
 from dash import Input, Output, State, html
 import dash_bootstrap_components as dbc
 
-from functions.functions import display_interactive_chart
+from functions.functions import update_df,display_interactive_chart
 from navbar.navbar import create_navbar
 from sidebar.sidebar import create_sidebar
 from dashboard.graphs import create_graphs
 
 
 
-def update_df(csv_path):
-    """
-    Update the database of pipelines
-    """
-    # pylint: disable=unsubscriptable-object
-    # pylint: disable=unsupported-assignment-operation
-    # pylint: disable=invalid-name
-    db = pd.read_csv(csv_path, encoding='utf-8', sep=';')
-    db.set_index('Pipeline_id', inplace = True)
-    db['Date'] = pd.to_datetime(db['Date']).dt.tz_localize(None)
-
-    return db
 
 database= update_df(csv_path=os.path.join('Data','data.csv'))
 
