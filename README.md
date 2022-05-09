@@ -24,7 +24,7 @@ A screenshot of the app is shown below.
 
 ## Try the application on a dev server
 
-The fastest way to run the web app to familarize with its content is to run it locally on a dev server. 
+The fastest way to run the web app to familarize with its content is to run it locally on a dev server. To avoid any unexpected error, make sure to have python 3.10 installed.
 
 1. First, download or clone the repository in your device.
 
@@ -85,7 +85,7 @@ Dash is running on http://127.0.0.1:8050/
 
 Before proceeding, I invite you to install Docker in your device. Visit https://docs.docker.com/get-docker/ .
 
-**Warning:** Because Gunicorn only runs on Linux, this is a Linux Docker container. If you are using Windows 10, make sure to have Hyper-V isolation enabled (Docker asks to enable Hyper-V during installation), or use a Virtual Machine with a Linux distribution (This last option is *not recommended*). You can always run the application on a dev server, see the instructions above.
+**Warning:** Because Gunicorn only runs on Linux, this is a Linux Docker container. If you are using Windows 10, make sure to have [WSL 2](https://docs.microsoft.com/fr-fr/windows/wsl/install) installed and Hyper-V isolation enabled (Docker asks to enable Hyper-V during installation), or use a Virtual Machine with a Linux distribution (This last option is *not recommended*). You can always run the application on a dev server, see the instructions above.
 
 1. First you need to build the Docker image. In your command prompt, type the following command:
 
